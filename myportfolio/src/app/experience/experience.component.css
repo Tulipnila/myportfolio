@@ -1,0 +1,59 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+}
+.edu-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.edu-container h1, .edu-container h3,.edu-container .course h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edu-container .course{
+    text-indent: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.edu-container .course h2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: brown;
+    text-indent: 0;
+    color:white;
+
+}
+.exp-container h1{
+    text-align: center;
+}
+.exp-container,.experience{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.experience{
+    padding: 5px;
+    border:2px solid brown;
+
+}
+.experience h2{
+    font-size: 30px;
+    color:brown;
+}
+@media (min-width:686px) {
+
+}
+@media (min-width:982px) {
+    .container{
+        display: flex;
+        
+    }
+    
+}

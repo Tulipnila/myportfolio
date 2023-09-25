@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="edu-container">
+            <h3>Education</h3>
+            <h1>My Education</h1>
+        <div class="course" *ngFor="let study of studies; let i = index">
+            <h2>{{ i+1 }}</h2>
+            <div *ngIf = "study.batch" class="batch">{{study.batch}}</div>
+            <p>{{study.course}} ({{study.percentage}}%)</p>
+        </div>
+    </div>
+    <div class="exp-container">
+        <h1>Work Experience</h1>
+        <div class="experience" *ngFor="let work of works">
+            <h3>{{work.period}}</h3>
+            <h2>{{work.designation}}</h2>
+            <h3>{{work.experience}}</h3>
+        </div>
+    </div>
+</div>

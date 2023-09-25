@@ -1,0 +1,36 @@
+<div class="project-container">
+  <div class="head-container">
+    <h4>portfolio</h4>
+    <h2>our latest <span>work</span></h2>
+  </div>
+    <!-- filter btn -->
+  <div class="row">
+    <div class="col-lg-8 d-flex justify-content-center sortBtn flex-wrap">
+      <a href="#" class="filter-btn active" (click)="filterProjects('*')">All</a>
+      <a href="#" class="filter-btn" (click)="filterProjects('angular')">Angular</a>
+      <a href="#" class="filter-btn" (click)="filterProjects('javascript')">Javascript</a>
+      <a href="#" class="filter-btn" (click)="filterProjects('html')">Html, Css</a>
+    </div>
+  </div>
+
+  <div class="row-grid">
+    <div *ngFor="let item of filteredProjects">
+      <div class="single-work text-center mt-30">
+        <div class="work-image">
+          <img [src]="item.image" alt="" width="200" height="200">
+        </div>
+        <div class="work-overlay">
+          <div class="work-content">
+            <h3 class="work-title">{{ item.title }}</h3>
+            <ul>
+              <li><a [href]="item.url" class="image-popup"><i class="fa fa-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
