@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">VG</div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="cross" onclick="closemenu()">X</div>
+                </ul>
+                <div class="menu bar" onclick="openmenu()"></div>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Vijaya Lakshmi</span><br> From Tenkasi</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="user"></div>
+                    <!-- <img src="images/user.png"> -->
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <h2>Why You Hire Me</h2>
+                    <p> I may be new to the field,  but my drive to learn and my commitment to 
+                        excellence make me an asset ready to take on any web development endeavor. 
+                        Let's collaborate and turn ideas into reality.</p>
+                    <p>Looking forward to the journey ahead.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Java Script</span></li>
+                            <li><span>Angular 16</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2016</span><br>B.Com (CA) at Manonmaniam Sundaranar University</li>
+                            <li><span>2013</span><br>HSC at Chidambaranar Memorial Higher Secondary School</li>
+                            <li><span>2011</span><br>SSLC at Chidambaranar Memorial Higher Secondary School</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 Apr - Current</span><br>6 months Experience as an Incubation Trainee in Zoho Corporation Pvt Ltd, Thenkasi</li>
+                            <li><span>2016 Dec - 2020 Jan</span><br>3 Years of Accounting Experience in Sri Muthu Vinayagar Spring Spare Parts, Thoothukudi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- -----------portfolio---------- -->
+    <div id="portfolio">
+        <div class="head-container">
+          <h4>portfolio</h4>
+          <h2>our latest <span>work</span></h2>
+        </div>
+        <!-- filter btn -->
+        <div class="row">
+            <a href="#" class="filter-btn active" onclick="filterProjects('*')">All</a>
+            <a href="#" class="filter-btn" onclick="filterProjects('angular')">Angular</a>
+            <a href="#" class="filter-btn" onclick="filterProjects('javascript')">Javascript</a>
+            <a href="#" class="filter-btn" onclick="filterProjects('html')">Html, Css</a>
+        </div>
+      
+        <div class="row-grid" id="projectsContainer">
+          <!-- Projects will be dynamically added here -->
+        </div>
+    </div>
+    <!-- ------------contact ----------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>vijibalan@gmail.com</p>
+                    <p>+91 97900 24764</p>
+                    <a href="images/viji resume.pdf" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea name="Message" id="msg" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn" >Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
